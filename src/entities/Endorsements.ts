@@ -13,7 +13,7 @@ export class Endorsement {
   @PrimaryGeneratedColumn()
   id: number;
 
-  //type to be unique
+  //type to be unique here we add the restaurant types
   @Column({ unique: true })
   type: string;
 

@@ -38,6 +38,6 @@ Before you begin, ensure you have the following installed on your system:
      "michael",
      "scott"
  ],
- "time": "2024-07-02T18:30:00Z"
+ "datetime": "2024-07-02T18:30:00Z"
  }
 ```
