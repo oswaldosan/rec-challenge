@@ -1,23 +1,23 @@
-// tsconfig.json
 {
   "compilerOptions": {
-    "target": "es6",
-    "module": "commonjs",
-    "outDir": "./dist",
-    "rootDir": "./src",
-    "strict": true,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true,
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "baseUrl": "./",
-    "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    }
+   "target": "es2018",
+   "lib": ["es5", "es6", "ES2018"],
+   "experimentalDecorators": true,
+   "emitDecoratorMetadata": true,
+   "module": "commonjs",
+   "moduleResolution": "node",
+   "resolveJsonModule": true,
+   "allowJs": true,
+   "outDir": "./dist",
+   "esModuleInterop": true,
+   "forceConsistentCasingInFileNames": true,
+   "strict": true,
+   "noImplicitAny": true,
+   "strictPropertyInitialization": false
   },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules"]
-}
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+   "files": true
+  }
+ }

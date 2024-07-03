@@ -1,10 +1,9 @@
-// src/routes/index.ts
 import express from "express";
-import booksRoutes from "./bookroutes";
+import restaurantRoutes from "./restaurantRoutes";
 
 const router = express.Router();
 
 // Add additional routes as needed
-router.use("/books", booksRoutes);
+router.use("/restaurants/", restaurantRoutes);
 
 export default router;

@@ -1,20 +1,26 @@
-// src/app.ts
 import express from "express";
 import cors from "cors";
-import bodyParser from "body-parser";
 import routes from "./routes";
-import { connectToDatabase } from "./config/database";
+import { AppDataSource } from "./config/data-source";
 
-const app = express();
+AppDataSource.initialize()
+  .then(() => {
+    const app = express();
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
+    // Middleware
+    app.use(cors());
+    app.use(express.json());
 
-// Connect to the database
-connectToDatabase();
+    // Routes
+    app.use("/api", routes);
 
-// Define routes
-app.use("/api", routes);
-
-export default app;
+    // Start server
+    const port = process.env.PORT || 3000;
+    app.listen(port, () => {
+      console.log(`Server running on port ${port}`);
+    });
+  })
+  .catch((error) => {
+    console.error("Failed to initialize the data source:", error);
+    process.exit(1);
+  });

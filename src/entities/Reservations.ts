@@ -1,7 +1,7 @@
-import { Entity } from "typeorm";
+import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
 
-Entity();
-export class Reservations {
+Entity("reservations");
+export class Reservation {
   @PrimaryGeneratedColumn()
   id!: number;
 
