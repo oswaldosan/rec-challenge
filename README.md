@@ -30,6 +30,13 @@ Before you begin, ensure you have the following installed on your system:
    npm install
    ```
 
+3. **Run Dev Env**
+   For local development copy env-example to .env and run
+
+   ```bash
+   npm run dev
+   ```
+
 # API INTERACTION
 
 ### Get Restaurants available and POST reservation
