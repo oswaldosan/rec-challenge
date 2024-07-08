@@ -6,6 +6,6 @@ const router = express.Router();
 
 // Add additional routes as needed
 router.use("/restaurants/", restaurantRoutes);
-router.use("/reservation/", reservationRoutes);
+router.use("/reservations/", reservationRoutes);
 
 export default router;

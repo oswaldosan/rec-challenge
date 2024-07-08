@@ -30,7 +30,13 @@ Before you begin, ensure you have the following installed on your system:
    npm install
    ```
 
-## for reservations send
+# API INTERACTION
+
+## Get Restaurants available and POST reservation
+
+    •	Method: POST
+    •	Endpoint: /restaurants
+    •	Description: Creates a new reservation
 
 ```bash
  {
@@ -41,3 +47,21 @@ Before you begin, ensure you have the following installed on your system:
  "datetime": "2024-07-02T18:30:00Z"
  }
 ```
+
+## Get All Reservations
+
+    •	Method: GET
+    •	Endpoint: /reservations/
+    •	Description: Retrieves a list of all reservations in the system.
+
+## Get Reservation for a Specific User
+
+    •	Method: GET
+    •	Endpoint: /reservations/{userId}
+    •	Description: Retrieves reservations for a specific user by their user ID.
+
+## Delete a Reservation
+
+    •	Method: DELETE
+    •	Endpoint: /reservations/{reservationId}
+    •	Description: Deletes a specific reservation by reservation ID.
